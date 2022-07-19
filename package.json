@@ -1,6 +1,12 @@
 {
+  "name": "lucasali",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@7.4.0",
+  "description": "My personal website",
+  "author": { "name": "Lucas Sbardelotto Ali" },
+  "license": "MIT",
+  "repository": { "url": "https://github.com/lucasali/lucasali.me" },
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
