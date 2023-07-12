@@ -4,6 +4,9 @@ import { useDark } from '@vueuse/core'
 export const isDark = useDark()
 
 export function toggleDark(event: MouseEvent) {
+  // eslint-disable-next-line no-console
+  console.log(isDark.value)
+
   const isAppearanceTransition
     // @ts-expect-error experimental API
     = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches

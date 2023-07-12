@@ -1,14 +1,8 @@
 import { URL, fileURLToPath } from 'node:url'
-
-import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import Markdown from 'vite-plugin-vue-markdown'
 import Icons from 'unplugin-icons/vite'
+import { defineConfig } from 'vite'
 import SVG from 'vite-svg-loader'
-
-// @ts-expect-error missing types
-import TOC from 'markdown-it-table-of-contents'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,18 +16,8 @@ export default defineConfig({
   },
   plugins: [
     Vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/],
       reactivityTransform: true,
-    }),
-    Pages({
-      extensions: ['vue', 'md'],
-    }),
-    Markdown({
-      markdownItSetup(MarkdownIt) {
-        MarkdownIt.use(TOC, {
-          includeLevel: [1, 2, 3],
-        })
-      },
     }),
     Icons({}),
     SVG({

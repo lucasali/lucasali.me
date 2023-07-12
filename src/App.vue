@@ -6,7 +6,7 @@ import NavBar from './components/NavBar.vue'
 <template>
   <NavBar />
   <main>
-    <RouterView class="container mx-auto px-7 py-10 text-accent dark:text-primary font-bold" />
+    <RouterView class="container mx-auto px-7 py-10 text-accent font-bold" />
     <footer />
   </main>
 </template>
