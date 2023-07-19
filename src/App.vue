@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
+import { RouterView } from "vue-router";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <NavBar />
   <main>
-    <RouterView class="container mx-auto px-7 py-10 text-accent font-bold" />
+    <RouterView class="container mx-auto px-7 py-10" />
     <footer />
   </main>
 </template>
