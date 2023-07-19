@@ -1,7 +1,13 @@
 import { nextTick } from 'vue'
 import { useDark } from '@vueuse/core'
+import { ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export const isDark = useDark()
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
 
 export function toggleDark(event: MouseEvent) {
   // eslint-disable-next-line no-console

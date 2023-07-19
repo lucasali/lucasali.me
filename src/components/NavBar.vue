@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 import ToggleTheme from './ToggleTheme.vue'
 
 import IconGitHub from '~icons/mdi/github'
-import { isDark } from '~/utils/theme'
+import { isDark } from '~/lib'
 </script>
 
 <template>
@@ -34,3 +34,4 @@ import { isDark } from '~/utils/theme'
 </template>
 
 <style></style>
+~/lib/theme
