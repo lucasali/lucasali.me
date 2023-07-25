@@ -67,7 +67,7 @@ const techCards = ref<TechCard[]>([
 
 <template>
   <div class="flex flex-col gap-4">
-    <Card class="flex flex-col gap-4 md:flex-row">
+    <Card class="flex flex-col gap-4 md:flex-row bg-secondary">
       <div class="flex flex-col gap-2">
         <h1 class="text-4xl font-bold">
           Hi, I'm <span class="text-accent">Lucas</span>
