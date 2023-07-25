@@ -18,10 +18,10 @@ const { elementX, elementY } = useMouseInElement(card);
     class="border-gradient group relative rounded-xl p-8 before:absolute before:-inset-px before:h-[calc(100%+2px)] before:w-[calc(100%+2px)] before:rounded-xl"
   >
     <div
-      class="absolute inset-0 grid place-items-center rounded-[11px] bg-accent/80 p-2 transition-colors duration-300"
+      class="absolute inset-0 grid place-items-center rounded-[11px] bg-accent p-2 transition-colors duration-300"
     >
-      <slot />
-    </div>
+  </div>
+  <slot  />
   </div>
 </template>
 

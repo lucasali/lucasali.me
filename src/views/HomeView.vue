@@ -66,18 +66,25 @@ const techCards = ref<TechCard[]>([
 </script>
 
 <template>
-  <div class="flex flex-wrap">
-    <!-- <ShinyCard>
-      <div class="relative flex h-full flex-col md:justify-center">
-        <h2 class="text-2xl font-medium text-white">Lucas Ali</h2>
-        <div class="mt-4 text-gray-400 md:w-1/2 md:text-lg">TODO</div>
-      </div>
-    </ShinyCard> -->
-    <Card class="grid grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6 w-full">
+  <div class="flex flex-col gap-4">
+    <Card>
+      <img src="/avatar.png" alt="" class="rounded-full border border-accent-foreground">
+      <h1 class="text-4xl font-bold">
+        Hi, I'm <span class="text-accent">Siddharth</span>
+      </h1>
+      <p class="text-xl">
+        I'm a full-stack developer with a passion for building beautiful
+        interfaces and experiences.
+      </p>
+    </Card>
+
+    <Card
+      class="grid grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6 w-full"
+    >
       <Card
         v-for="card in techCards"
         :key="JSON.stringify(card)"
-        class="group flex flex-col"
+        class="group flex flex-col items-center"
       >
         <component
           :is="card.icon"

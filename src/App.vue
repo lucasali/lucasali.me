@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar.vue";
 
 <template>
   <NavBar />
-  <main class="container mx-auto px-7 py-10">
+  <main class="container mx-auto px-10 py-10">
     <RouterView />
     <footer />
   </main>
