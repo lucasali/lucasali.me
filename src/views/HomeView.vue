@@ -67,12 +67,12 @@ const techCards = ref<TechCard[]>([
 
 <template>
   <div class="flex flex-col gap-4">
-    <Card class="flex gap-4">
-      <div class="flex flex-col">
+    <Card class="flex flex-col gap-4 md:flex-row">
+      <div class="flex flex-col gap-2">
         <h1 class="text-4xl font-bold">
           Hi, I'm <span class="text-accent">Lucas</span>
         </h1>
-        <p class="text-xl">
+        <p class="text-xl [text-wrap:balance]">
           I'm a front-end developer with a passion for building beautiful
           interfaces and experiences.
         </p>
@@ -80,31 +80,27 @@ const techCards = ref<TechCard[]>([
       <img
         src="/avatar.png"
         alt=""
-        class="w-64 rounded-full border-4 border-accent"
+        class="w-24 rounded-full border-4 border-accent lg:w-64"
       />
     </Card>
 
-    <Card title="5+">
-      <p class="text-xl">Years of experience</p>
-
-      <div
-        class="grid w-full grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6"
+    <div
+      class="grid w-full grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6"
+    >
+      <Card
+        v-for="card in techCards"
+        :key="JSON.stringify(card)"
+        class="group flex flex-col items-center"
       >
-        <div
-          v-for="card in techCards"
-          :key="JSON.stringify(card)"
-          class="group flex flex-col items-center"
+        <component
+          :is="card.icon"
+          class="h-10 w-10 grayscale transition-all duration-150 group-hover:grayscale-0"
         >
-          <component
-            :is="card.icon"
-            class="h-10 w-10 grayscale transition-all duration-150 group-hover:grayscale-0"
-          >
-          </component>
-          <p>
-            {{ card.name }}
-          </p>
-        </div>
-      </div>
-    </Card>
+        </component>
+        <p>
+          {{ card.name }}
+        </p>
+      </Card>
+    </div>
   </div>
 </template>
