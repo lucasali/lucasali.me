@@ -1,7 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Props {
+  title?: string
+}
+
+const props = defineProps<Props>()
+</script>
 
 <template>
-  <div class="shadow-lg rounded-xl bg-card p-8 border border-card-foreground">
+  <div class="rounded-xl border border-secondary bg-background p-8 shadow-lg">
+    <h1 class="text-4xl font-bold">{{ title }}</h1>
     <slot></slot>
   </div>
 </template>

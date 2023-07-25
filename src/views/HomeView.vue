@@ -84,11 +84,8 @@ const techCards = ref<TechCard[]>([
       />
     </Card>
 
-    <Card>
-      <div>
-        <h1 class="text-4xl font-bold">5+</h1>
-        <p class="text-xl">Years of experience</p>
-      </div>
+    <Card title="5+">
+      <p class="text-xl">Years of experience</p>
 
       <div
         class="grid w-full grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6"
