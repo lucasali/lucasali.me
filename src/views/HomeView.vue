@@ -67,34 +67,47 @@ const techCards = ref<TechCard[]>([
 
 <template>
   <div class="flex flex-col gap-4">
-    <Card>
-      <img src="/avatar.png" alt="" class="rounded-full border border-accent-foreground">
-      <h1 class="text-4xl font-bold">
-        Hi, I'm <span class="text-accent">Siddharth</span>
-      </h1>
-      <p class="text-xl">
-        I'm a full-stack developer with a passion for building beautiful
-        interfaces and experiences.
-      </p>
+    <Card class="flex gap-4">
+      <div class="flex flex-col">
+        <h1 class="text-4xl font-bold">
+          Hi, I'm <span class="text-accent">Lucas</span>
+        </h1>
+        <p class="text-xl">
+          I'm a front-end developer with a passion for building beautiful
+          interfaces and experiences.
+        </p>
+      </div>
+      <img
+        src="/avatar.png"
+        alt=""
+        class="w-64 rounded-full border-4 border-accent"
+      />
     </Card>
 
-    <Card
-      class="grid grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6 w-full"
-    >
-      <Card
-        v-for="card in techCards"
-        :key="JSON.stringify(card)"
-        class="group flex flex-col items-center"
+    <Card>
+      <div>
+        <h1 class="text-4xl font-bold">5+</h1>
+        <p class="text-xl">Years of experience</p>
+      </div>
+
+      <div
+        class="grid w-full grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))] gap-6"
       >
-        <component
-          :is="card.icon"
-          class="h-10 w-10 grayscale transition-all duration-150 group-hover:grayscale-0"
+        <div
+          v-for="card in techCards"
+          :key="JSON.stringify(card)"
+          class="group flex flex-col items-center"
         >
-        </component>
-        <p>
-          {{ card.name }}
-        </p>
-      </Card>
+          <component
+            :is="card.icon"
+            class="h-10 w-10 grayscale transition-all duration-150 group-hover:grayscale-0"
+          >
+          </component>
+          <p>
+            {{ card.name }}
+          </p>
+        </div>
+      </div>
     </Card>
   </div>
 </template>
