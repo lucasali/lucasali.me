@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { isDark, toggleDark } from '~/lib';
-import IconWeatherNight from '~icons/mdi/weather-night';
-import IconWhiteBalanceSunny from '~icons/mdi/white-balance-sunny';
+import { isDark, toggleDark } from "~/lib";
+import IconWeatherNight from "~icons/mdi/weather-night";
+import IconWhiteBalanceSunny from "~icons/mdi/white-balance-sunny";
 </script>
 
 <template>
@@ -10,4 +10,3 @@ import IconWhiteBalanceSunny from '~icons/mdi/white-balance-sunny';
     <IconWeatherNight v-else />
   </a>
 </template>
-~/lib/theme

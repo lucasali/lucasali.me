@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { FunctionalComponent, ref, SVGAttributes } from "vue";
 import Card from "~/components/Card.vue";
+import Icon from "~/components/Icon.vue";
 import ShinyCard from "~/components/ShinyCard.vue";
 import {
   C,
@@ -67,10 +68,10 @@ const techCards = ref<TechCard[]>([
 
 <template>
   <div class="flex flex-col gap-4">
-    <Card class="flex flex-col gap-4 md:flex-row bg-secondary">
-      <div class="flex flex-col gap-2">
+    <Card class="flex flex-col gap-4 border-accent bg-secondary md:flex-row">
+      <div class="flex flex-1 flex-col gap-2">
         <h1 class="text-4xl font-bold">
-          Hi, I'm <span class="text-accent">Lucas</span>
+          Hi, I'm <span class="text-primary">Lucas</span>
         </h1>
         <p class="text-xl [text-wrap:balance]">
           I'm a front-end developer with a passion for building beautiful
@@ -80,7 +81,7 @@ const techCards = ref<TechCard[]>([
       <img
         src="/avatar.png"
         alt=""
-        class="w-24 rounded-full border-4 border-accent lg:w-64"
+        class="h-24 w-24 rounded-full border border-primary lg:h-64 lg:w-64"
       />
     </Card>
 
@@ -90,14 +91,14 @@ const techCards = ref<TechCard[]>([
       <Card
         v-for="card in techCards"
         :key="JSON.stringify(card)"
-        class="group flex flex-col items-center"
+        class="group flex flex-col items-center gap-2 transition-all duration-150 hover:bg-secondary"
       >
         <component
           :is="card.icon"
-          class="h-10 w-10 grayscale transition-all duration-150 group-hover:grayscale-0"
+          class="h-10 w-10 grayscale group-hover:grayscale-0"
         >
         </component>
-        <p>
+        <p class="font-medium">
           {{ card.name }}
         </p>
       </Card>
